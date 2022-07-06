@@ -1,0 +1,8 @@
+<mat-form-field appearance="fill">
+  <mat-label>Kategoria</mat-label>
+  <mat-select (selectionChange)="onSelect($event.value)" [(value)]="defaultValue">
+    <mat-option *ngFor="let category of categories" [value]="category">
+      {{ category }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>

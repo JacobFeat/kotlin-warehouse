@@ -1,0 +1,54 @@
+<form class="add-form" [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+  <h2>Dodaj produkt</h2>
+  <table class="example-full-width" cellspacing="0">
+    <tr>
+      <td>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Nazwa</mat-label>
+          <input formControlName="title" matInput />
+        </mat-form-field>
+      </td>
+    </tr>
+  </table>
+
+  <table class="example-full-width" cellspacing="0">
+    <tr>
+      <td>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Cena</mat-label>
+          <input formControlName="price" matInput />
+        </mat-form-field>
+      </td>
+    </tr>
+  </table>  
+  
+  <table class="example-full-width" cellspacing="0">
+    <tr>
+      <td>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Kategoria</mat-label>
+          <input formControlName="category" matInput />
+        </mat-form-field>
+      </td>
+    </tr>
+  </table>
+
+  <p>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Opis</mat-label>
+      <textarea matInput formControlName="description"></textarea>
+    </mat-form-field>
+  </p>
+
+  <table class="example-full-width" cellspacing="0">
+    <tr>
+      <td>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Url</mat-label>
+          <input matInput formControlName="imgUrl" />
+        </mat-form-field>
+      </td>
+    </tr>
+  </table>
+  <button mat-raised-button color="primary">Dodaj</button>
+</form>

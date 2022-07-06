@@ -1,0 +1,11 @@
+<div class="btn-container">
+  <button (click)="onFormOpen()" mat-raised-button color="primary" class="btn">{{ isFormOpened ? "Ukryj" : "Dodaj nowy produkt" }}</button>
+</div>
+<app-add-product (addedProduct)="addProduct($event)" *ngIf="isFormOpened"></app-add-product>
+<app-products-filters (selectedCategory)="onCategorySelect($event)" [categories]="categories"></app-products-filters>
+
+<div class="products-list">
+  <ng-container *ngFor="let product of products">
+      <app-product-card (deletedProductId)="deleteProduct($event)" [product]="product"></app-product-card>
+  </ng-container>
+</div>
